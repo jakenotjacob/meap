@@ -65,3 +65,38 @@ Directory for placing snippets of Ruby code (modules) that provide *helpers* for
 Mailers
 ---
 Directory containing classes of the application dealing with sending mail! (you didn't see that coming, did ya?!)
+
+
+
+Chapter 1
+=========
+
+Generate new application
+------------------------
+`rails new things_i_bought`
+
+Start the server
+----------------
+`rails server` or `rails s`
+- This uses the Ruby standard library webserver (WEBrick)
+
+Open the server in your browser
+- Nagivate to *localhost:3000* or *0.0.0.0:3000* or *127.0.0.1:3000*
+
+Scream "CHOO CHOO" and thrust your fist into the air
+- Apologize to the cat for interrupting her slumber
+
+Application Environments
+------------------------
+Rails provides three application environments: development/test/production
+*Development*
+- Classes are not *cached*; no need to restart server after changes to a class
+*Production*
+- Classes ARE cached; server restarts required for changes to take effect
+
+Scaffolding
+-----------
+*Scaffold* - generates model/controller/views/tests based on name passed
+
+
+

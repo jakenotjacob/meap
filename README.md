@@ -40,9 +40,10 @@ REST (Representational State Transfer)
 ---
 A dominant *routing* paradigmn found througout the web, and also used heavily in Rails.
 - Provides rules as to how requests are *routed* within the application itself
+
 This is very important to follow in creating an application that can be refactored easily for future developers, as
-well as making your API (Application Programming Interface) easily accessible to outside developers, so they can embed
-your framework (or pieces of it) inside *their* application.
+well as making your API (Application Programming Interface) easily accessible to outside developers, so they can use
+pieces of it inside *their* application.
 
 Useful knowledge:
 - [Best Practices for Designing a Pragmatic RESTful API](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)

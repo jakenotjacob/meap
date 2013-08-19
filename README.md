@@ -16,8 +16,12 @@ Let's begin!
 Basics
 ====
 
-*MVC*(Model/View/Controller)
+MVC (Model/View/Controller)
 ---
+*Model*
+Contains application domain logic
+- this includes database record retreival, validation and manipulation.
+
 
 
 

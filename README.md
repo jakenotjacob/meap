@@ -45,8 +45,8 @@ well as making your API (Application Programming Interface) easily accessible to
 your framework (or pieces of it) inside *their* application.
 
 Useful knowledge:
-[Best Practices for Designing a Pragmatic RESTful API](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
-[GET a cup of coffee](http://www.infoq.com/articles/webber-rest-workflow)
+- [Best Practices for Designing a Pragmatic RESTful API](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
+- [GET a cup of coffee](http://www.infoq.com/articles/webber-rest-workflow)
 
 Core Components
 ====

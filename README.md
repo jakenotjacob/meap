@@ -24,17 +24,17 @@ MVC (Model/View/Controller)
 *Controller* - median between model (databases) and view
 - call methods on model classes which return objects
 - returned objects
--- represent rows in the database
--- can be single objects or collections of them
--- made available to the *view* through *instance variables* 
+> represent rows in the database
+> can be single objects or collections of them
+> made available to the *view* through *instance variables* 
 - perform permission checking
--- ensures special permission functions (i.e. admin functions) are limited to that user
+> ensures special permission functions (i.e. admin functions) are limited to that user
 
 *View* - displays information gathered by controller
 - references instance variables set in the *controller*
 - *ERB*(Embedded Ruby) template
--- allows injection of Ruby code into any kind of file
--- preprocessed by server before being sent to the user
+> allows injection of Ruby code into any kind of file
+> preprocessed by server before being sent to the user
 
 REST (Representational State Transfer)
 ---

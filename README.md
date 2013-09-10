@@ -66,17 +66,24 @@ Mailers
 ---
 Directory containing classes of the application dealing with sending mail! (you didn't see that coming, did ya?!)
 
+Application Environments
+------------------------
+Rails provides three application environments: development/test/production
+*Development*
+- Classes are not *cached*; no need to restart server after changes to a class
+*Production*
+- Classes ARE cached; server restarts required for changes to take effect
 
-
-Chapter 1
-=========
+Creating Components
+====
 
 Generate new application
 ------------------------
 `rails new things_i_bought`
+    hello this is just a test
 
-Start the server
-----------------
+Starting the WEBrick server
+----------------------------
 `rails server` or `rails s`
 - This uses the Ruby standard library webserver (WEBrick)
 
@@ -86,17 +93,20 @@ Open the server in your browser
 Scream "CHOO CHOO" and thrust your fist into the air
 - Apologize to the cat for interrupting her slumber
 
-Application Environments
-------------------------
-Rails provides three application environments: development/test/production
-*Development*
-- Classes are not *cached*; no need to restart server after changes to a class
-*Production*
-- Classes ARE cached; server restarts required for changes to take effect
-
 Scaffolding
 -----------
 *Scaffold* - generates model/controller/views/tests based on name passed
+
+bin/rails generate scaffold [scaffold name] [field name]:[field type] [another fName]:[another fType]
+- The fields after the scaffold name will become entried in the database, and *attributes* for the object
+- This generates a *migration* that will be added into the database
+
+*Migration* - provides a means of version control to the database
+- This allowed incremental changes to be made to the schema of the database
+    rake db:migrate
+
+*Files/Directories* - db/migrate/[date]name_of_migration.rb (ActiveRecord::Migration)
+- This migration file can be edited pre-migration to include
 
 
 

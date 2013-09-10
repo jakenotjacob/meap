@@ -80,7 +80,6 @@ Creating Components
 Generate new application
 ------------------------
 `rails new things_i_bought`
-    hello this is just a test
 
 Starting the WEBrick server
 ----------------------------
@@ -103,7 +102,7 @@ bin/rails generate scaffold [scaffold name] [field name]:[field type] [another f
 
 *Migration* - provides a means of version control to the database
 - This allowed incremental changes to be made to the schema of the database
-    rake db:migrate
+    `rake db:migrate`
 
 *Files/Directories* - db/migrate/[date]name_of_migration.rb (ActiveRecord::Migration)
 - This migration file can be edited pre-migration to include

@@ -18,21 +18,21 @@ Basics
 
 MVC (Model/View/Controller)
 ---
-*Model* - application domain logic
+**Model** - application domain logic
 - this includes database record retreival, validation and manipulation.
 
-*Controller* - median between model (databases) and view
+**Controller** - median between model (databases) and view
 - calls methods on model classes which *return objects*
-*returned objects*
+**returned objects**
 - represent rows in the database
 - can be single objects or collections of them
 - made available to the *view* through *instance variables* 
 performs permission checking
 - ensures special permission functions (i.e. admin functions) are limited to that user
 
-*View* - displays information gathered by controller
+**View** - displays information gathered by controller
 References instance variables set in the *controller*
-*ERB*(Embedded Ruby) template
+**ERB**(Embedded Ruby) template
 - allows injection of Ruby code into any kind of file
 - preprocessed by server before being sent to the user
 
@@ -69,9 +69,9 @@ Directory containing classes of the application dealing with sending mail! (you 
 Application Environments
 ------------------------
 Rails provides three application environments: development/test/production
-*Development*
+**Development**
 - Classes are not *cached*; no need to restart server after changes to a class
-*Production*
+**Production**
 - Classes ARE cached; server restarts required for changes to take effect
 
 Creating Components
@@ -94,18 +94,16 @@ Scream "CHOO CHOO" and thrust your fist into the air
 
 Scaffolding
 -----------
-*Scaffold* - generates model/controller/views/tests based on name passed
+**Scaffold** - generates model/controller/views/tests based on name passed
 
 bin/rails generate scaffold [scaffold name] [field name]:[field type] [another fName]:[another fType]
 - The fields after the scaffold name will become entried in the database, and *attributes* for the object
 - This generates a *migration* that will be added into the database
 
-*Migration* - provides a means of version control to the database
+**Migration** - provides a means of version control to the database
 - This allowed incremental changes to be made to the schema of the database
-    `rake db:migrate`
+`rake db:migrate`
 
-*Files/Directories* - db/migrate/[date]name_of_migration.rb (ActiveRecord::Migration)
+**Files/Directories** - db/migrate/[date]name_of_migration.rb (ActiveRecord::Migration)
 - This migration file can be edited pre-migration to include
-
-
 

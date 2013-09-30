@@ -107,3 +107,29 @@ bin/rails generate scaffold [scaffold name] [field name]:[field type] [another f
 **Files/Directories** - db/migrate/[date]name_of_migration.rb (ActiveRecord::Migration)
 - This migration file can be edited pre-migration to include
 
+Testing
+====
+
+Unit testing (and MiniTest) has the general idea that there are *test methods* that
+make *assertions* about your code.  These *test methods* are used against *test fixtures* 
+to determine if a certain functionality is working properly
+
+**MiniTest** - TDD (Test Driven Development)
+
+---
+- Note: MiniTest class methods must have prefix of "test_methodNameHere" to ensure that the 
+method properly inherits MiniTest class functions.
+
+
+**RSpec** - BDD (Behavior Driven Development)
+
+---
+
+- Code is written with *specs* that contain *examples* of what functionality should and should'nt do.
+
+*Running Tests*
+`rspec spec/`
+- This will run all the tests in the "spec" directory
+`rspec spec/ --example Bacon`
+- This matches the *describe block* title, so as to run a specific test in the suite.
+

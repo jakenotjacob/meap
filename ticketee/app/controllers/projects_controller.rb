@@ -7,7 +7,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = Project.new( params[:object] )
+    @project = Project.new( params[:project] )
 
     if @project.save
       flash[:notice] = "Project has been created."
@@ -16,5 +16,10 @@ class ProjectsController < ApplicationController
       # Nadar en la piscina
     end
   end
+
+  private
+    def project_params
+      params.require(:project).permit(:name, :description)
+    end
 
 end

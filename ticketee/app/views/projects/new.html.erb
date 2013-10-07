@@ -1,5 +1,5 @@
-<h2>New Application</h2>
-<% form_for(@project) do |f| %>
+<h2>New Project</h2>
+<%= form_for(@project) do |f| %>
   <p>
     <%= f.label :name %><br />
     <%=  f.text_field :name %>
@@ -9,6 +9,5 @@
     <%= f.label :description  %><br />
     <%= f.text_field :description  %>
   </p>
-
   <%= f.submit %>
 <% end %>

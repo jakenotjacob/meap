@@ -10,9 +10,15 @@ feature "Editing Projects" do
   end
 
   scenario "Updating a project" do
-    fill_in "Name", with: ""
+    fill_in "Name", with: "TextMate2"
     click_button "Update Project"
 
     expect(page).to have_content("Project has been updated.")
+  end
+  scenario "Updating a project with invalid attributes is bad" do
+    fill_in "Name", with: ""
+    click_button "Update Project"
+
+    expect(page).to have_content("Project has not been updated.")
   end
 end

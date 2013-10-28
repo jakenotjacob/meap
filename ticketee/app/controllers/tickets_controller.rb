@@ -18,7 +18,9 @@ class TicketsController < ApplicationController
   end
 
   def show
+  end
 
+  def edit
   end
 
   private

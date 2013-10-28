@@ -18,9 +18,10 @@ feature "Editing tickets" do
     expect(page).to have_content "Ticket has been updated."
 
     within("#ticket h2") do
-      expect(page).to have_content("Ticket has been updated.")
+      expect(page).to have_content("Make it really shiny!")
     end
-    expect(page).to_not have_content("Make it really shiny!")
+    
+    expect(page).to_not have_content ticket.title
   end
 
   scenario "Updating a ticket with invalid information" do

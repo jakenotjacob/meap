@@ -5,7 +5,8 @@
       prohibited this user from being saved:</h2>
 
     <ul>
-      <% @ticket.errors.full_messages.each do |msg| %>
+      <%#@ticket.errors%>
+      <% @user.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
     </ul>
@@ -28,5 +29,5 @@
 <%= f.label :password_confirmation %><br>
 <%= f.password_field :password_confirmation %>
 </p>
-<%= f.submit "Sign up" %>
+<%= f.submit (@user.new_record?) ? "Sign up" : "Update profile" %>
 <% end %>

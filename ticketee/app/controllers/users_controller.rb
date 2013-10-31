@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
   def new
     @user = User.new
   end
@@ -8,6 +9,7 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:notice] = "You have signed up successfully."
+      #Later, this could be a profile/edit user-info page
       redirect_to projects_path
     else
       render :new
@@ -17,8 +19,26 @@ class UsersController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
+  def update
+    if @user.update(user_params)
+      flash[:notice] = "User has been updated."
+      redirect_to @user
+    else
+      flash[:alert] = "User has not been updated"
+      render action: "edit"
+    end
+  end
+
   private
+    def set_user
+      @user = User.find(params[:id])
+    end
+
     def user_params
-      params.require(:user).permit(:name, :password, :password_confirmation)
+      params.require(:user).permit(:name, :email, :password, 
+                                   :password_confirmation)
     end
 end

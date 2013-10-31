@@ -1,3 +1,5 @@
+#This file created as a backup before removing
+#sample/unwanted files from Chp6.2 of Rails4InAction
 require 'spec_helper'
 
 describe ProjectsController do

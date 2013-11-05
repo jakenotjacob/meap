@@ -11,7 +11,7 @@ feature "Creating Tickets" do
     message = "You need to sign in or sign up before continuing."
     expect(page).to have_content(message)
 
-    fill_in "User Name", with: user.name
+    fill_in "Username", with: user.name
     fill_in "Password", with: user.password
     click_button "Sign in"
 

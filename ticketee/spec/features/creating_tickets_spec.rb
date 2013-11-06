@@ -15,7 +15,8 @@ feature "Creating Tickets" do
     fill_in "Password", with: user.password
     click_button "Sign in"
 
-    within("h2") { expect(page).to have_content("New Ticket") }
+    click_link project.name
+    click_link "New Ticket"
   end
 
   scenario "Creating a ticket" do

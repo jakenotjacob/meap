@@ -1,7 +1,7 @@
 class TicketsController < ApplicationController
+  before_action :require_signin! #except: [:show, :index] (temp-disabled)
   before_action :set_project
   before_action :set_ticket, only: [:show, :edit, :update, :destroy]
-  before_action :require_signin!, except: [:show, :index]
   def new
     #build instantiates new record for Tickets assocation on Proj obj
     @ticket = @project.tickets.build

@@ -1,0 +1,28 @@
+" Press ? for help
+
+.. (up a dir)
+/home/jake/Code/
+|+archive/
+|+Builds/
+|+code_practice/
+|+Cplusplus/
+|+dataStuff/
+|+giggit/
+|+kindalike/
+|+meap/
+|+ooobot/
+|+OooSocket/
+|+Other/
+|+Puppet/
+|+puppet/
+|+Rails/
+|+Ruby/
+|+Treesaver/
+|+Tutorial/
+|+whys/
+|-add_signature.rb*
+|-edward.txt
+|-IRBhist
+|-r.rb
+|-tcpRead.sh*
+`-test.rb

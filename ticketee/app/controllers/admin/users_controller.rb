@@ -8,6 +8,25 @@ class Admin::UsersController < Admin::BaseController
   def show
   end
 
+  def edit
+  end
+  
+  def update
+    #Ensure user cannot be updated with BLANK password
+    if params[:user][:password].blank?
+      params[:user].delete(:password)
+      params[:user].delete(:password_confirmation)
+    end
+
+    if @user.update(user_params)
+      flash[:notice] = "User has been updated."
+      redirect_to admin_users_path
+    else
+      flash[:alert] = "User has not been updated."
+      render action: "edit"
+    end
+  end
+
   def new
     @user = User.new
   end

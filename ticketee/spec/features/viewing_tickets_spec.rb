@@ -10,7 +10,10 @@ feature "Viewing tickets" do
                        title: "Make it shiny!", 
                        description: "Gradients! Starbursts! Oh my!")
     ticket.update(user: user)
+
+
     visit '/'
+    sign_in_as!(user)
   end
 
   #=>Scenarios below

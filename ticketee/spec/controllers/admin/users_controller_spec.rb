@@ -1,12 +1,15 @@
 require 'spec_helper'
 
 describe Admin::UsersController do
+  let(:user) { FactoryGirl.create(:user) }
 
-  describe "GET 'index'" do
-    it "returns http success" do
+  context "standard users" do
+    before { sign_in(user) }
+
+    it "are not able to access the index action" do
       get 'index'
-      response.should be_success
+      expect(response).to redirect_to('/')
+      expect(flash[:alert]).to eql("You must be an admin to do that.")
     end
   end
-
 end

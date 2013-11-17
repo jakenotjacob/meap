@@ -3,6 +3,6 @@ module AuthorizationHelpers
     Permission.create!(user: user, action: action, thing: thing)
   end
 end
-Rspec.configure do |c|
+RSpec.configure do |c|
   c.include AuthorizationHelpers
 end

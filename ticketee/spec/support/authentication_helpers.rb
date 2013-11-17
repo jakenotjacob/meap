@@ -7,7 +7,6 @@ module AuthenticationHelpers
     expect(page).to have_content("Signed in successfully.")
   end
 end
-
 RSpec.configure do |config|
   config.include AuthenticationHelpers, type: :feature
 end
@@ -17,7 +16,6 @@ module AuthHelpers
     session[:user_id] = user.id
   end
 end
-
 RSpec.configure do |c|
   c.include AuthHelpers, type: :controller
 end

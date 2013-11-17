@@ -11,7 +11,7 @@ feature "Viewing tickets" do
                        description: "Gradients! Starbursts! Oh my!")
     ticket.update(user: user)
 
-
+    define_permission!(user, "view", project)
     visit '/'
     sign_in_as!(user)
   end

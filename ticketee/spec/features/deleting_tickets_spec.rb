@@ -11,6 +11,7 @@ feature 'Deleting tickets' do
 
   before do
     define_permission!(user, "view", project)
+    define_permission!(user, "delete tickets", project)
     sign_in_as!(user)
 
     visit '/'
@@ -24,4 +25,6 @@ feature 'Deleting tickets' do
     expect(page).to have_content("Ticket has been deleted.")
     expect(page.current_url).to eq(project_url(project))
   end
+
 end
+

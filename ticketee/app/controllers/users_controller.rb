@@ -8,6 +8,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
+      #Sign in user by putting ID into SESSION
+      session[:user_id] = @user.id
       flash[:notice] = "You have signed up successfully."
       #Later, this could be a profile/edit user-info page
       redirect_to projects_path

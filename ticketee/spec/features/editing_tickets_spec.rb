@@ -10,7 +10,10 @@ feature "Editing tickets" do
   end
 
   before do
+    #Define User READ access
     define_permission!(user, "view", project)
+    #Define User UPDATE access
+    define_permission!(user, "edit tickets", project)
     #sign_in... is called from helper (supp/auth_helper.rb)
     sign_in_as!(user)
     visit '/'

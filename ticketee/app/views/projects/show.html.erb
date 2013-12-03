@@ -16,7 +16,7 @@
    <% @project.tickets.each do |ticket| %>
      <li>
      <%# ticket NOT @ticket - ticket var. uninitialized here %>
-     #<%= ticket.id %> - <%= link_to ticket.title, [@project, ticket] %>
+     <%= ticket.id %> - <%= link_to ticket.title, [@project, ticket] %>
    </li>
  <% end %>
  </ul>

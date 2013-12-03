@@ -21,3 +21,9 @@
 
 # Ignore pre-compiled assets
 /public/assets
+# Ignore DB setting for security
+/config/database.yml
+# Ignore public/system directory
+# --no need to add ver.ctl to uploaded files
+public/uploads
+

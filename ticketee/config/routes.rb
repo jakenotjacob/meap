@@ -19,4 +19,6 @@ Ticketee::Application.routes.draw do
     end
   end
 
+  resources :files
+
 end

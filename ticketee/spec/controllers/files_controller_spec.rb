@@ -44,6 +44,5 @@ describe FilesController do
     end
   end
 
-
 end
 

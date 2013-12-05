@@ -1,14 +1,15 @@
 <div id='ticket'>
   <h2><%= @ticket.title %></h2>
   <span id='author'>Created by <%= @ticket.user.email %></span>
-
+  </br>
   <%= authorized?("edit tickets", @project) do %>
     <%= link_to "Edit Ticket", [:edit, @project, @ticket] %>
   <% end %>
-
-  <%= link_to "Delete Ticket", [@project, @ticket], method: :delete,
+  <%= authorized?("delete tickets", @project) do %>
+    <%= link_to "Delete Ticket", [@project, @ticket], method: :delete,
     data: { confirm: "Are you sure you want to delete this ticket?"} %>
-  
+  <% end %>
+
   <%= simple_format(@ticket.description) %>
 
   <% if @ticket.assets.exists? %>
@@ -16,7 +17,7 @@
     <div class="assets">
       <% @ticket.assets.each do |asset| %>
       <p>
-      <%= link_to File.basename(asset.asset.path), asset.asset.url %>
+      <%= link_to File.basename(asset.asset.path), file_path(asset) %>
       </p>
       <p>
         <%# Display size of file %>

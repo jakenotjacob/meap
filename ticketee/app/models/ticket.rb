@@ -8,4 +8,5 @@ class Ticket < ActiveRecord::Base
   has_many :assets
   #=>Applies to Ticket's new/build/update-methods
   accepts_nested_attributes_for :assets
+  has_many :comments
 end

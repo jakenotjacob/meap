@@ -10,7 +10,7 @@ class TicketsController < ApplicationController
   def new
     #build instantiates new record for Tickets assocation on Proj obj
     @ticket = @project.tickets.build
-    3.times { @ticket.assets.build }
+    @ticket.assets.build
   end
 
   def create

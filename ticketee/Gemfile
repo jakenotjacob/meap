@@ -11,7 +11,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'turbolinks'
+#Removed Turbo to fix spec tests reading JS events
+##gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'cancan', '1.6.9'
@@ -20,6 +21,7 @@ gem 'carrierwave', '0.8.0'
 
 group :test, :development do
   gem 'rspec-rails', "~> 2.13.2"
+  gem 'database_cleaner', '1.0.1'
 end
 
 group :test do

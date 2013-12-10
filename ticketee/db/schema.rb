@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20131210012452) do
     t.string  "name"
     t.string  "color"
     t.string  "background"
-    t.boolean "default"
+    t.boolean "default",    default: false
   end
 
   create_table "tickets", force: true do |t|

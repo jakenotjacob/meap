@@ -87,11 +87,10 @@ feature "Assigning permissions" do
     select "Open", from: "State"
     click_button "Create Comment"
     page.should have_content("Comment has been created.")
-    page.should have_selector('.state', text: 'Open')
-    #within("#ticket .state") do
-    #  page.should have_content("Open")
-    #end
+    #GOOD - page.should have_selector('#ticket, div.state.state_open', text: "Status: Open")
+    page.should have_selector('#ticket, .state', text: "Status: Open")
   end
+
   scenario "A user without permission cannot change the state" do
     sign_in_as!(user)
     click_link project.name

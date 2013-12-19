@@ -3,6 +3,7 @@ class CommentsController < ApplicationController
   before_filter :find_ticket
 
   def create
+    authorize_change_state!
     @comment = @ticket.comments.build( comment_params )
     @comment.user = current_user
     if @comment.save
@@ -23,5 +24,12 @@ class CommentsController < ApplicationController
     def find_ticket
       @ticket = Ticket.find(params[:ticket_id])
     end
+
+    def authorize_change_state!
+      if cannot?("change states".to_sym, @ticket.project)
+        params[:comment].delete(:state_id)
+      end
+    end
+   
 end
 

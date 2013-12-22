@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
   before_filter :find_ticket
 
   def create
-    authorize_change_state!
+    sanitize_parameters!
     @comment = @ticket.comments.build( comment_params )
     @comment.user = current_user
     if @comment.save
@@ -25,9 +25,13 @@ class CommentsController < ApplicationController
       @ticket = Ticket.find(params[:ticket_id])
     end
 
-    def authorize_change_state!
+    def sanitize_parameters!
       if cannot?("change states".to_sym, @ticket.project)
         params[:comment].delete(:state_id)
+      end
+
+      if cannot?(:tag, @ticket.project)
+        params[:comment].delete(:tag_names)
       end
     end
    

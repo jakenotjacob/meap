@@ -8,6 +8,7 @@ feature "Creating comments" do
   let!(:state) { FactoryGirl.create(:state, name: "Open") }
   before do
     define_permission!(user, "view", project)
+    define_permission!(user, "tag", project)
     define_permission!(user, "change states", project)
 
     sign_in_as!(user)

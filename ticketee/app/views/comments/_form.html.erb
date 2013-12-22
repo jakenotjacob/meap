@@ -23,6 +23,9 @@
                           selected: @ticket.state_id %>
   </p>
 <% end %>
-  <%= f.submit %>
+
+<%= render "tags/form", f: f %>
+
+<%= f.submit %>
 <% end %>
 

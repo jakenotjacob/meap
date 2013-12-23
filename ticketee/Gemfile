@@ -17,7 +17,10 @@ gem 'jbuilder', '~> 1.2'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'cancan', '1.6.9'
 
+#File Upload
 gem 'carrierwave', '0.8.0'
+
+gem 'searcher', git: "git://github.com/radar/searcher"
 
 group :test, :development do
   gem 'rspec-rails', "~> 2.13.2"

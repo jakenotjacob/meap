@@ -10,7 +10,12 @@ Ticketee::Application.configure do
   # Do not eager load code on boot. This avoids loading your whole application
   # just for the purpose of running a single test. If you are using a tool that
   # preloads Rails for running tests, you may have to set it to true.
-  config.eager_load = false
+  #
+  #=> This is currently set to 'true' do to issues with the Searcher gem failing tests
+  #=> (in the test environment -- development environment seems to be fine)
+  #### Thread discussing issue: 
+  ####http://www.manning-sandbox.com/thread.jspa?threadID=60611&tstart=-1&messageID=147798
+  config.eager_load = true
 
   # Configure static asset server for tests with Cache-Control for performance.
   config.serve_static_assets  = true

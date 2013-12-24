@@ -55,6 +55,11 @@ class TicketsController < ApplicationController
     redirect_to @project
   end
 
+  def search
+    @tickets = @project.tickets.search(params[:search])
+    render "projects/show"
+  end
+
   private
   def set_project
     @project = Project.find(params[:project_id])

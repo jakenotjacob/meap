@@ -6,6 +6,10 @@ class ProjectsController < ApplicationController
     @projects = Project.for(current_user)
   end
 
+  def show
+    @tickets = @project.tickets
+  end
+
   def new
     @project = Project.new
   end
@@ -22,9 +26,6 @@ class ProjectsController < ApplicationController
     end
   end
 
-  def show
-  end
-  
   def edit
   end
 

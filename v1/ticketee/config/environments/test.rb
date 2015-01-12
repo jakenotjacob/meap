@@ -15,6 +15,14 @@ Ticketee::Application.configure do
   #=> (in the test environment -- development environment seems to be fine)
   #### Thread discussing issue: 
   ####http://www.manning-sandbox.com/thread.jspa?threadID=60611&tstart=-1&messageID=147798
+  #
+  #Might have to do with...
+  #
+  #Relation#all is deprecated.
+  #If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`).
+  #If you want to get an array of records from a relation, you can call #to_a 
+  #(e.g. `Post.where(published: true).to_a`).
+  #
   config.eager_load = true
 
   # Configure static asset server for tests with Cache-Control for performance.

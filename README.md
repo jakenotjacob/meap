@@ -1,6 +1,13 @@
 meap
 ====
 
+###UPDATE###
+The initial commit up through the commit on Dec 23, 2013 have been **moved to
+the v1 folder**, as I have begun a second walkthrough of the book from the MEAP 
+v17 release of the book.  **See v2 for the updated application**
+
+
+
 A following of the Rails 4 in Action book by Ryan Bigg &amp; Yehuda Katz.
 
 As my second tutorial and experience with Ruby on Rails, I intend to do this
